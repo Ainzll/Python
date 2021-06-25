@@ -1,0 +1,1822 @@
+// The scene that our group is doing is supposed to be a depiction of
+// a tsundere anime girl with ducks and scuttle ducks.
+// This anime girl is a special type of anime girl, refered to as a Neko Girl.
+// If you didn't know before, Neko means Cat.
+// This project was made by our group, which consists of Peter Van, Lore Walter, and Wyatt Bucher.
+
+hide();
+// Background
+penRGB(255,161,252);
+dot(300);
+// Background Heart Call
+heart(randomNumber(50,300),randomNumber(25,75),255,0,0,0);
+heart(randomNumber(50,300),randomNumber(25,75),255,0,0,5);
+heart(randomNumber(50,300),randomNumber(25,75),255,0,0,10);
+// T-Shirt Fill Call
+shirtFill();
+// Face Fill Call
+faceFill();
+// Arms Fill Call
+armsFill();
+// Hair Call
+hair(randomNumber(0,200),randomNumber(0,200),randomNumber(0,200));
+// Right Side Text Call
+rightText();
+// Face Call
+drawFace();
+// Neck-Left Call
+drawNeck();
+// Arm + Finger Left Call
+armFingerleft();
+// Neck-Right Call
+neckRight();
+// Arm + Finger Right Call
+armFingerright();
+// Neck Fill Call
+neckFill();
+// T-Shirt Call
+tShirt();
+// Body Call
+body();
+// Legs Fill Call
+legsFill();
+// Legs Call
+legs();
+// Name on T-Shirt Call
+name();
+// Shorts Call
+shorts();
+// Shorts Fill Call
+shortsFill();
+// Nya Call 
+sayNya();
+lorecode();
+function lorecode() {
+penUp();
+moveTo(90, 400);
+//This code makes the main duck body and the parameter changes the angle of it.
+function   duck (side) {
+  penDown();
+  penRGB(255, 255, 255, 1);
+  turnTo(side);
+  moveForward(25);
+  arcRight(90, 5);
+  arcLeft(90, 20);
+  arcLeft(60, 8);
+  penRGB(252, 115, 3, 1);
+  turnTo(side);
+  moveForward(10);
+  arcLeft(180, 3);
+  moveForward(10);
+  penRGB(255, 255, 255, 1);
+  arcRight(90, 15);
+  arcLeft(90, 25);
+  moveForward(5);
+  arcLeft(90, 18);
+  moveForward(7);
+  turnLeft(90);
+  moveForward(5);
+  penUp();
+  move(-50, -21);
+  dot(2);
+}
+turnLeft(90);
+//This code makes the foot of the duck it also randomly changes the color slightly.
+function duckFoot() {
+  penWidth(2);
+
+  penDown();
+  penRGB(randomNumber(250, 255), 115, 3, 1);
+  moveForward(18);
+  moveBackward(8);
+  turnRight(45);
+  moveForward(8);
+  turnLeft(95);
+  moveForward(7);
+  turnLeft(90);
+  moveForward(7);
+  turnLeft(95);
+  moveForward(7);
+  penUp();
+}
+//the code below moves the pen to were the leg needs to start.
+move(30, 45);
+show();
+penUp();
+turnRight(50);
+moveForward(10);
+turnTo(270);
+moveBackward(15);
+turnLeft(90);
+penUp();
+//The randomLeg code moves the leg to were it needs to be with the preameter of cord and cord2. then I put in the Angel preameter Angel changs the angel so that it can be randomised in the call function.
+function randomLeg(cord, cord2, Angel) {
+  if(randomNumber(1, 10)>3) {moveTo(cord,cord2);
+    turnTo(Angel);
+    duckFoot();
+    penUp();} else {
+    }
+}
+//The RandomLeg will call in the leg or not so that it is random for every leg not just legs or legs
+hide();
+moveTo(240, 389);
+show();
+turnTo(90);
+
+moveTo(230, 400);
+//Duck right flips the duck code so that it will besomend to the right other then how it is called in facing left. it also has a preameter that can change the angel. there 
+function   DuckRight (side) {
+  penWidth(1);
+  penDown();
+  penRGB(255, 255, 255, 1);
+  turnTo(side);
+  moveForward(25);
+  arcLeft(90, 5);
+  arcRight(90, 20);
+  arcRight(60, 8);
+  penRGB(252, 115, 3, 1);
+  turnTo(side);
+  moveForward(10);
+  arcRight(180, 3);
+  moveForward(10);
+  penRGB(255, 255, 255, 1);
+  arcLeft(90, 15);
+  arcRight(90, 25);
+  moveForward(5);
+  arcRight(90, 18);
+  moveForward(7);
+  turnRight(90);
+  moveForward(5);
+  penUp();
+  move(50, -21);
+  dot(2);
+}
+DuckRight(90);
+hide();
+
+// this moves the pen to were it can call in duckRight at 256, 420
+penUp();
+moveTo(256,420);
+turnTo(180);
+duckFoot();
+moveTo(241, 420);
+turnTo(170);
+// this calls the duck feet so there are at lest two feet on the duck.
+duckFoot();
+//the randomLeg calls in all the duck leg on the right leg. it also has the
+randomLeg(270,410,randomNumber(170, 200));
+randomLeg(240,420,randomNumber(170, 200));
+randomLeg(228,412,randomNumber(170, 200));
+randomLeg(248,396,randomNumber(0, 5));
+//this makes a honks sound after the rest of the code is done.
+for (var i = 0; i < 2; i++) {
+  playSound ("Honk1.mp3");
+}
+}
+
+
+
+// Frame Call
+for (var i = 0; i < 1000000; i++) {
+  frame(255,0,145);
+}
+
+ // Wyatt Did This
+// Face Fill Function
+function faceFill(){
+penUp();
+moveTo(150,190);
+penRGB(255,219,172);
+penDown();
+dot(40);
+}
+// End Face Fill Function
+
+ // Wyatt and Peter Did All This
+// Hair Function
+function hair(r,g,b){
+  // Peter Did This
+// Ears
+// Left
+penUp();
+penRGB(0,0,0);
+moveTo(144,116);
+turnTo(-35);
+penWidth(2);
+penDown(r,g,b);
+moveForward(35);
+arcLeft(140,7);
+moveForward(40);
+
+penUp();
+penRGB(r,g,b);
+moveTo(140,115);
+turnTo(-35);
+penWidth(5);
+penDown();
+moveForward(30);
+arcLeft(140,5);
+moveForward(35);
+
+penUp();
+penRGB(255,255,255);
+moveTo(125,112);
+turnTo(10);
+penDown();
+moveForward(7);
+moveBackward(7);
+turnTo(-90);
+moveForward(7);
+moveBackward(7);
+turnTo(-45);
+moveForward(7);
+moveBackward(7);
+turnTo(-135);
+moveForward(8);
+moveBackward(8);
+turnTo(65);
+moveForward(5);
+moveBackward(5);
+
+ // Peter Did This
+// Right
+penUp();
+penRGB(0,0,0);
+moveTo(156,116);
+turnTo(35);
+penWidth(2);
+penDown();
+moveForward(35);
+arcRight(140,7);
+moveForward(40);
+
+penUp();
+penRGB(r,g,b);
+moveTo(160,115);
+turnTo(35);
+penWidth(5);
+penDown();
+moveForward(30);
+arcRight(140,5);
+moveForward(35);
+
+penUp();
+penRGB(255,255,255);
+moveTo(175,112);
+turnTo(-10);
+penDown();
+moveForward(7);
+moveBackward(7);
+turnTo(90);
+moveForward(7);
+moveBackward(7);
+turnTo(45);
+moveForward(7);
+moveBackward(7);
+turnTo(135);
+moveForward(8);
+moveBackward(8);
+turnTo(-65);
+moveForward(5);
+moveBackward(5);
+
+ // Peter and Wyatt Did This
+// Hair Fill
+// Top
+penUp();
+penWidth(5);
+moveTo(102,160);
+turnTo(0);
+penRGB(r,g,b,1);
+penDown();
+arcRight(180,48);
+
+penUp();
+moveTo(130,160);
+penDown();
+dot(30);
+
+ // Peter and Wyatt Did This
+// Far Left Hair Strand
+penUp();
+moveTo(103,160);
+turnTo(180);
+penDown();
+moveForward(49);
+arcLeft(90,17);
+turnTo(0);
+
+ // Peter and Wyatt Did This
+// Middle Left Hair Strand
+penUp();
+moveTo(108,219);
+penDown();
+moveForward(50);
+arcRight(15,100);
+
+ // Peter and Wyatt Did This
+// Closer Left Hair Strand
+penUp();
+turnTo(0);
+penWidth(6);
+moveTo(114,223);
+penDown();
+moveForward(45);
+arcRight(15,100);
+penWidth(5);
+
+ // Peter and Wyatt Did This
+// Left Long Hair Strand
+penUp();
+turnTo(180);
+moveTo(120,180);
+penDown();
+arcLeft(3,1500);
+penUp();
+turnTo(0);
+moveTo(124,180);
+penDown();
+arcRight(15,60);
+penUp();
+turnTo(177);
+moveTo(120,257);
+penDown();
+arcLeft(180,1);
+
+ // Peter and Wyatt Did This
+// Right Side Hair
+penUp();
+turnTo(180);
+moveTo(121,180);
+penDown();
+arcLeft(3,1500);
+penUp();
+turnTo(0);
+moveTo(121,180);
+penDown();
+arcRight(15,75);
+
+penUp();
+moveTo(198,160);
+turnTo(180);
+penDown();
+moveForward(50);
+arcRight(90,17);
+
+penUp();
+turnTo(0);
+moveTo(193,219);
+penDown();
+moveForward(50);
+arcLeft(15,100);
+
+penUp();
+turnTo(0);
+moveTo(188,223);
+penDown();
+moveForward(45);
+arcLeft(15,100);
+
+penUp();
+turnTo(180);
+moveTo(183,180);
+penDown();
+arcRight(3,1500);
+
+penUp();
+turnTo(0);
+moveTo(183,180);
+penDown();
+arcLeft(15,80);
+
+penUp();
+turnTo(183);
+moveTo(175,259);
+penDown();
+arcLeft(180,2);
+
+penUp();
+turnTo(180);
+moveTo(179,180);
+penDown();
+arcRight(3,1500);
+penUp();
+turnTo(0);
+moveTo(179,177);
+penDown();
+arcLeft(15,75);
+
+ // Peter and Wyatt Did This
+// Bangs
+// Bangs Top 
+penUp();
+turnTo(220);
+moveTo(175,163);
+penDown();
+arcRight(45,75);
+
+ // Peter and Wyatt Did This
+// Bangs Bottom
+penUp();
+turnTo(210);
+moveTo(160,148);
+penDown();
+arcRight(45,59);
+
+ // Peter and Wyatt Did This
+// Bangs Middle Top
+penUp();
+turnTo(220);
+moveTo(175,158);
+penDown();
+arcRight(45,75);
+
+ // Peter and Wyatt Did This
+// Bangs Middle Bottom
+penUp();
+turnTo(215);
+moveTo(166,153);
+penDown();
+arcRight(45,65);
+
+ // Peter Did This
+// Head Finish
+penUp();
+moveTo(150,145);
+penDown();
+dot(33);
+moveTo(130,145);
+dot(25);
+moveTo(170,145);
+dot(25);
+// End Hair Fill Function
+
+ // Peter Did This
+// Tail 
+penUp();
+moveTo(116,375);
+turnTo(215);
+penWidth(10);
+penDown();
+moveForward(20);
+arcRight(45,50);
+arcRight(45,25);
+arcRight(180,10);
+penWidth(1);
+
+ // Peter Did This
+// Left Side Hair Strands Outline
+penUp();
+penWidth(1);
+moveTo(100,160);
+turnTo(0);
+penRGB(0,0,0,1);
+penDown();
+arcRight(180,50);
+
+penUp();
+moveTo(100,160);
+turnTo(180);
+penDown();
+moveForward(50);
+arcLeft(90,17);
+turnTo(0);
+
+penUp();
+moveTo(105,219);
+penDown();
+moveForward(50);
+arcRight(15,100);
+
+penUp();
+turnTo(0);
+moveTo(110,223);
+penDown();
+moveForward(45);
+arcRight(15,100);
+
+penUp();
+turnTo(180);
+moveTo(125,180);
+penDown();
+arcLeft(3,1500);
+penUp();
+turnTo(0);
+moveTo(125,180);
+penDown();
+arcRight(15,60);
+penUp();
+turnTo(177);
+moveTo(120,259);
+penDown();
+arcLeft(180,3);
+
+penUp();
+turnTo(180);
+moveTo(117,180);
+penDown();
+arcLeft(3,1500);
+penUp();
+turnTo(0);
+moveTo(117,180);
+penDown();
+arcRight(15,75);
+
+ // Peter Did This
+// Right Side Hair Strands Outline
+penUp();
+moveTo(200,160);
+turnTo(180);
+penDown();
+moveForward(50);
+arcRight(90,17);
+
+penUp();
+turnTo(0);
+moveTo(195,219);
+penDown();
+moveForward(50);
+arcLeft(15,100);
+
+penUp();
+turnTo(0);
+moveTo(190,223);
+penDown();
+moveForward(45);
+arcLeft(15,100);
+
+penUp();
+turnTo(180);
+moveTo(185,180);
+penDown();
+arcRight(3,1500);
+
+penUp();
+turnTo(0);
+moveTo(185,180);
+penDown();
+arcLeft(15,80);
+
+penUp();
+turnTo(183);
+moveTo(175,259);
+penDown();
+arcLeft(180,4);
+
+penUp();
+turnTo(180);
+moveTo(177,180);
+penDown();
+arcRight(3,1500);
+penUp();
+turnTo(0);
+moveTo(177,180);
+penDown();
+arcLeft(15,75);
+
+ // Peter and Wyatt Did This
+// Bangs Outline
+//Top and Bottom
+penUp();
+turnTo(220);
+moveTo(175,165);
+penRGB(0,0,0);
+penDown();
+arcRight(45,75);
+penUp();
+turnTo(210);
+moveTo(160,150);
+penDown();
+arcRight(45,59);
+
+ // Peter Did This
+// Middle Two
+penUp();
+turnTo(220);
+moveTo(175,160);
+penDown();
+arcRight(45,75);
+penUp();
+turnTo(215);
+moveTo(166,155);
+penDown();
+arcRight(45,65);
+
+ // Peter Did This
+// Hair Seperation
+penUp();
+penRGB(0,0,0);
+turnTo(180);
+moveTo(152,110);
+penDown();
+turnRight(45);
+moveForward(5);
+turnLeft(90);
+moveForward(5);
+turnRight(90);
+moveForward(5);
+turnLeft(90);
+moveForward(5);
+turnRight(90);
+moveForward(5);
+turnLeft(90);
+moveForward(5);
+turnRight(90);
+moveForward(5);
+penRGB(r,g,b);
+}
+// End of Hair Function
+
+ // Peter Did This
+// Face Function
+function drawFace(){
+ // Peter Did This
+// Eye outer Fill
+penUp();
+moveTo(167,183.5);
+penDown();
+dot(3.5);
+
+ // Peter Did This
+// Eye
+penUp();
+moveTo(167,183.5);
+penDown();
+dot(3.5);
+ 
+ // Peter Did This
+// Color Change
+penRGB(0,0,0);
+
+penUp();
+turnTo(135);
+moveTo(155,185);
+penDown();
+arcLeft(90,15);
+turnTo(-45);
+arcLeft(90,15);
+penUp();
+moveTo(167.5,183);
+penDown();
+dot(1.5);
+
+ // Peter Did This
+// Head Finish
+penUp();
+turnTo(225);
+moveTo(176,220);
+penDown();
+arcRight(90,36);
+
+ // Peter Did This
+// Color Change
+penRGB(0,0,0);
+
+ // Peter Did This
+// Eyebrow
+penUp();
+moveTo(165,177);
+turnTo(80);
+penWidth(2);
+penDown();
+moveForward(10);
+
+ // Peter Did This
+// Mouth
+penUp();
+moveTo(142,215);
+turnTo(70);
+penWidth(1);
+penDown();
+arcRight(45,25);
+
+penUp();
+turnTo(220);
+moveTo(163,210);
+penDown();
+arcLeft(90,7);
+
+penUp();
+turnTo(140);
+moveTo(140,210);
+penDown();
+arcRight(90,7);
+
+ // Peter Did This
+// Color Change
+penRGB(245, 17, 130);
+
+ // Peter Did This
+// Right Blush
+penUp();
+turnTo(210);
+moveTo(171,195);
+penDown();
+moveForward(5);
+penUp();
+turnTo(210);
+moveTo(168,194);
+penDown();
+moveForward(7);
+penUp();
+turnTo(210);
+moveTo(165,194);
+penDown();
+moveForward(7);
+penUp();
+turnTo(210);
+moveTo(161,195);
+penDown();
+moveForward(5);
+
+ // Peter Did This
+// Left Blush
+penUp();
+turnTo(210);
+moveTo(142,195);
+penDown();
+moveForward(5);
+penUp();
+turnTo(210);
+moveTo(139,194);
+penDown();
+moveForward(7);
+penUp();
+turnTo(210);
+moveTo(136,194);
+penDown();
+moveForward(7);
+penUp();
+turnTo(210);
+moveTo(132,195);
+penDown();
+moveForward(5);
+}
+// End of Face Function
+
+ // Peter Did This
+// Neck Function
+function drawNeck(){
+// Color Change
+penRGB(0,0,0);
+
+ // Peter Did This
+// Neck-Left
+penUp();
+turnTo(190);
+moveTo(137,227);
+penDown();
+arcRight(45,20);
+}
+// End of Neck Function
+
+ // Peter Did This
+// Arms, Left + Right, Function
+function armFingerleft(){
+   // Peter Did This
+// Arm-Left
+turnTo(-90);
+moveForward(3);
+penUp();
+moveForward(8);
+penDown();
+moveForward(10);
+arcLeft(95,15);
+moveForward(55);
+arcLeft(80,15);
+moveForward(60);
+
+ // Peter Did This
+// Hand + Fingers Left
+turnTo(135);
+arcLeft(45,20);
+moveForward(20);
+arcLeft(180,3);
+
+penUp();
+moveTo(200,330);
+turnTo(90);
+penDown();
+moveForward(7);
+arcLeft(180,3);
+
+penUp();
+moveTo(200,325);
+turnTo(90);
+penDown();
+moveForward(9);
+arcLeft(180,3);
+
+penUp();
+moveTo(200,319);
+turnTo(90);
+penDown();
+moveForward(9);
+arcLeft(180,3);
+turnTo(-90);
+moveForward(4.5);
+
+penUp();
+moveTo(175,313);
+turnTo(40);
+penDown();
+arcRight(45,15);
+moveForward(15);
+arcRight(180,3.5);
+moveForward(1);
+
+ // Peter Did This
+// Arm-Left-Upper
+penUp();
+moveTo(175,312);
+turnTo(-87);
+penDown();
+moveForward(38);
+}
+// End Arms, Left + Right, Function
+
+ // Peter Did This
+// Neck-Right Function
+function neckRight(){
+   // Peter Did This
+// Neck-Right
+penUp();
+turnTo(-190);
+moveTo(163,227);
+penDown();
+arcLeft(45,20);
+}
+// End Neck-Right Function
+
+ // Peter Did This
+// Arm + Fingers Right Function
+function armFingerright(){
+ // Peter Did This
+// Arm-Right
+turnTo(97);
+moveForward(4);
+penUp();
+moveForward(10);
+penDown();
+moveForward(10);
+arcRight(85,15);
+moveForward(55);
+penUp();
+moveForward(23);
+turnTo(-90);
+moveForward(2);
+turnTo(185);
+penDown();
+moveForward(15);
+
+ // Peter Did This
+// Hand + Fingers Right
+// Pinky
+turnTo(135);
+arcRight(45,20);
+turnTo(180);
+moveForward(15);
+arcRight(180,3);
+
+ // Peter Did This
+// Ring
+moveForward(8);
+moveBackward(12);
+turnTo(180);
+arcRight(180,3);
+
+ // Peter Did This
+// Middle
+moveForward(8);
+moveBackward(10);
+turnTo(180);
+arcRight(180,3);
+moveForward(2);
+}
+// End Arm + Finger Right Function
+
+ // Peter and Wyatt Did This
+// Neck Fill Function
+function neckFill(){
+penUp();
+penRGB(255,219,172);
+penWidth(5);
+moveTo(138,232);
+turnTo(115);
+penDown();
+arcLeft(45,32);
+penWidth(1);
+penRGB(0,0,0);
+}
+// End Neck Fill Function
+
+ // Peter and Wyatt Did This
+// Arms Fill Left + Right Function
+function armsFill(){
+penUp();
+penRGB(255,219,172);
+moveTo(105,305);
+turnTo(170);
+penWidth(15);
+penDown();
+moveForward(10);
+moveTo(110,310);
+turnTo(110);
+moveForward(10);
+moveTo(110,316);
+turnTo(95);
+moveForward(70);
+turnTo(86);
+penWidth(27);
+moveForward(20);
+
+penUp();
+moveTo(198,307);
+turnTo(185);
+penWidth(16);
+penDown();
+moveForward(44);
+turnTo(170);
+penWidth(20);
+moveForward(25);
+penWidth(10);
+moveTo(192,384);
+penRGB(0,0,0);
+}
+// End Arms Fill Function
+
+ // Peter Did This
+// T-Shirt Function
+function tShirt(){
+ // Peter Did This
+// T-Shirt
+penUp();
+moveTo(134,234);
+turnTo(115);
+penDown();
+arcLeft(45,40);
+penUp();
+moveTo(96,300);
+turnTo(85);
+penDown();
+moveForward(12);
+penUp();
+moveTo(206,300);
+turnTo(-85);
+penDown();
+moveForward(14);
+penUp();
+moveTo(115,325);
+turnTo(175);
+penDown();
+arcLeft(10,120);
+moveForward(5);
+penUp();
+moveTo(186,336);
+turnTo(185);
+penDown();
+arcRight(4,190);
+turnTo(-90);
+moveForward(64);
+penUp();
+moveTo(186,340);
+turnTo(180);
+moveForward(10);
+penDown();
+penUp();
+moveTo(189,307);
+turnTo(10);
+penDown();
+moveForward(8);
+}
+// End T-Shirt Function
+
+ // Peter Did This
+// Body Function
+function body(){
+ // Peter Did This
+// Body
+penUp();
+moveTo(105,285);
+turnTo(0);
+penDown();
+arcRight(45,15);
+penUp();
+moveTo(105,285);
+turnTo(180);
+penDown();
+arcLeft(145,25);
+turnTo(0);
+moveForward(5);
+turnLeft(40);
+moveForward(5);
+moveBackward(5);
+turnRight(80);
+moveForward(5);
+moveBackward(5);
+penUp();
+turnTo(180);
+moveTo(195,285);
+penDown();
+arcRight(145,25);
+penUp();
+moveTo(195,285);
+turnTo(0);
+penDown();
+arcLeft(45,15);
+penUp();
+moveTo(195,265);
+turnTo(190);
+penDown();
+arcRight(45,17);
+penUp();
+moveTo(105,265);
+turnTo(-190);
+penDown();
+arcLeft(45,17);
+}
+// End Body Function
+
+ // Peter Did This
+// Legs Function
+function legs(){
+ // Peter Did This
+// Legs-Left
+penUp();
+penRGB(0,0,0,1);
+penWidth(1);
+moveTo(120,350);
+turnTo(195);
+penDown();
+arcLeft(25,100);
+moveForward(57);
+
+ // Peter Did This
+// Legs-Right
+penUp();
+moveTo(185,350);
+turnTo(165);
+penDown();
+arcRight(25,100);
+moveForward(57);
+
+ // Peter Did This
+// Leg-Middle
+penUp();
+moveTo(152.5,457);
+turnTo(0);
+penDown();
+moveForward(77);
+turnLeft(40);
+moveForward(5);
+moveBackward(5);
+turnRight(80);
+moveForward(5);
+moveBackward(5);
+}
+// End Legs Function
+
+ // Peter Did This
+// Heart Function
+function heart(x,y,r,g,b,angle){
+penUp();
+moveTo(x,y);
+penWidth(1);
+penRGB(r,g,b);
+turnTo(angle);
+penDown();
+arcRight(215,10);
+moveForward(25);
+turnRight(95);
+moveForward(25);
+arcRight(215,10);
+penUp();
+penWidth(1);
+}
+
+ // Peter Did This
+// Color Change
+penRGB(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));
+
+ // Peter Did This
+// Right Side Text Function
+function rightText(){
+ // Peter Did This
+// 'Nothing'
+// B
+penUp();
+moveTo(220,150);
+turnTo(0);
+penDown();
+moveForward(20);
+turnTo(90);
+arcRight(180,5);
+turnTo(90);
+arcRight(180,5);
+
+// E
+penUp();
+moveTo(230,150);
+turnTo(0);
+penDown();
+moveForward(20);
+turnRight(90);
+moveForward(5);
+penUp();
+moveTo(230,140);
+penDown();
+moveForward(5);
+penUp();
+moveTo(230,150);
+penDown();
+moveForward(5);
+
+
+// T
+penUp();
+moveTo(245,150);
+turnTo(0);
+penDown();
+moveForward(20);
+turnLeft(90);
+moveForward(5);
+moveBackward(10);
+
+// S
+penUp();
+moveTo(255,150);
+turnTo(90);
+penDown();
+arcLeft(180,5);
+turnRight(30);
+arcRight(180,5);
+
+// U
+penUp();
+moveTo(265,130);
+turnTo(180);
+penDown();
+moveForward(15);
+arcLeft(180,5);
+moveForward(15);
+
+// N
+penUp();
+moveTo(280,150);
+turnTo(0);
+penDown();
+moveForward(20);
+turnTo(160);
+moveForward(21.5);
+turnTo(0);
+moveForward(20);
+
+// I
+penUp();
+moveTo(295,150);
+turnTo(0);
+penDown();
+moveForward(20);
+penUp();
+moveTo(290,150);
+turnTo(90);
+penDown();
+moveForward(10);
+penUp();
+moveTo(290,130);
+turnTo(90);
+penDown();
+moveForward(10);
+
+// !(exclamation mark)
+penUp();
+moveTo(305,130);
+turnTo(180);
+penDown();
+moveForward(15);
+penUp(); 
+moveForward(5);
+penDown();
+dot(1.5);
+}
+// End Right Side Text
+
+ // Peter Did This
+// Name on T-Shirt Function
+function name(){
+ // Peter Did This
+// Name ピーター
+// ピ
+penRGB(255,0,0);
+penUp();
+moveTo(120,280);
+turnTo(90);
+penDown();
+moveForward(5);
+moveBackward(8);
+turnTo(0);
+moveForward(15);
+moveBackward(8);
+turnTo(45);
+moveForward(10);
+arcRight(360,2);
+ // Peter Did This
+// ー
+penUp();
+moveTo(130,273);
+turnTo(90);
+penDown();
+moveForward(12);
+ // Peter Did This
+// タ
+penUp();
+moveTo(155,273);
+turnTo(45);
+penDown();
+arcLeft(45,12);
+penUp();
+moveTo(157,270);
+turnTo(90);
+penDown();
+moveForward(7);
+turnTo(180);
+arcRight(90,10);
+penUp();
+moveTo(158,275);
+turnTo(90);
+penDown();
+moveForward(7);
+ // Peter Did This
+// ー
+penUp();
+moveTo(170,273);
+turnTo(90);
+penDown();
+moveForward(12);
+}
+// End Name on T-Shirt Function
+
+ // Peter Did This
+// Shorts Function
+function shorts(){
+// Color Change
+penRGB(0,0,0);
+ // Peter Did This
+// Shorts
+penUp();
+moveTo(120,400);
+turnTo(90);
+penDown();
+moveForward(65);
+
+penUp();
+moveTo(119.5,398);
+turnTo(90);
+penDown();
+moveForward(66);
+
+penUp();
+moveTo(119,396);
+turnTo(90);
+penDown();
+moveForward(66);
+
+penUp();
+moveTo(119,395);
+turnTo(90);
+penDown();
+moveForward(68);
+
+penUp();
+moveTo(118,365);
+turnTo(90);
+penDown();
+arcLeft(90,17);
+
+penUp();
+moveTo(117,362);
+turnTo(90);
+penDown();
+arcLeft(90,14);
+
+penUp();
+moveTo(188,365);
+turnTo(-90);
+penDown();
+arcRight(90,17);
+
+penUp();
+moveTo(189,362);
+turnTo(-90);
+penDown();
+arcRight(90,14);
+}
+// End Shorts Function
+
+ // Peter Did This
+// Frame Function
+function frame(r,g,b){
+penUp();
+moveTo(2.5,2.5);
+turnTo(90);
+penWidth(10);
+penRGB(r,g,b);
+penDown();
+moveForward(315);
+turnRight(90);
+moveForward(445);
+turnRight(90);
+moveForward(315);
+turnRight(90);
+moveForward(445);
+turnRight(90);}
+// Frame Function End
+
+ // Peter and Wyatt Did This
+// Shorts Fill Function
+function shortsFill(){
+penUp();
+moveTo(120.5,392);
+penWidth(5);
+penRGB(255,25,25);
+turnTo(90);
+penDown();
+moveForward(28.5);
+turnLeft(90);
+moveForward(4);
+turnLeft(90);
+moveForward(29);
+turnRight(89);
+moveForward(4);
+turnTo(90);
+moveForward(29);
+turnTo(0);
+moveForward(2);
+turnTo(-35);
+moveForward(3);
+turnTo(-90);
+moveForward(28);
+turnTo(5);
+moveForward(4);
+turnTo(90);
+moveForward(26);
+turnTo(0);
+moveForward(4);
+turnTo(-90);
+moveForward(26.5);
+turnTo(0);
+moveForward(3);
+turnTo(90);
+arcLeft(88,18);
+turnTo(90);
+moveForward(31);
+turnTo(176);
+arcLeft(88,17);
+for (var i = 0; i < 6; i++) {
+ turnTo(180);
+arcRight(5,290);
+turnTo(-90);
+moveForward(4);
+turnTo(5);
+arcLeft(5,290);
+}
+turnTo(180);
+arcRight(5,290);
+turnTo(-90);
+moveForward(4.5);
+turnTo(0);
+moveForward(10);
+turnTo(35);
+moveForward(6);
+turnTo(0);
+moveForward(10);
+turnTo(90);
+moveForward(10);
+turnTo(0);
+moveForward(5);
+turnTo(-90);
+moveForward(4);
+turnTo(0);
+moveForward(7);
+turnTo(-90);
+moveForward(30);
+turnTo(180);
+moveForward(6.5);
+turnTo(215);
+moveForward(10);
+turnTo(90);
+penWidth(10);
+moveForward(30);
+turnTo(0);
+moveForward(8);
+turnTo(-90);
+moveForward(19);
+penUp();
+penWidth(1);
+turnTo(135);
+moveTo(150,375);
+penDown();
+moveForward(4);
+turnTo(45);
+moveForward(2);
+turnTo(-90);
+moveForward(1);
+dot(1);
+
+ // Peter and Wyatt Did This
+// Pockets
+penRGB(189,9,9,1);
+penUp();
+moveTo(122,350);
+turnTo(90);
+penDown();
+moveForward(7);
+turnTo(180);
+arcRight(90,10);
+turnTo(15);
+moveForward(9);
+turnTo(90);
+moveForward(7);
+turnTo(180);
+arcRight(90,9);
+turnTo(15);
+moveForward(8);
+turnTo(90);
+moveForward(7);
+turnTo(180);
+arcRight(90,8);
+turnTo(15);
+moveForward(7);
+turnTo(90);
+moveForward(2);
+turnTo(180);
+moveForward(2);
+dot(3);
+
+penUp();
+moveTo(183,350);
+turnTo(-90);
+penDown();
+moveForward(7);
+turnTo(180);
+arcLeft(90,10);
+turnTo(-15);
+moveForward(9);
+turnTo(-90);
+moveForward(7);
+turnTo(180);
+arcLeft(90,9);
+turnTo(-15);
+moveForward(8);
+turnTo(-90);
+moveForward(7);
+turnTo(180);
+arcLeft(90,8);
+turnTo(-15);
+moveForward(7);
+turnTo(-90);
+moveForward(2);
+turnTo(180);
+moveForward(2);
+dot(3);
+
+}
+// End Shorts Fill Function
+
+ // Peter and Wyatt Did This
+// Shirt Fill Function
+function shirtFill(){
+ // Peter and Wyatt Did This
+// Shirt Fill Left Sleeve
+penUp();
+moveTo(97,297);
+penRGB(255,255,255);
+turnTo(90);
+penDown();
+moveForward(10);
+turnTo(320);
+arcRight(25,25);
+turnTo(0);
+arcRight(25,25);
+moveForward(5);
+turnTo(-35);
+arcRight(15,35);
+turnTo(-90);
+moveForward(5);
+penWidth(5);
+turnTo(176);
+moveForward(30);
+turnTo(90);
+moveForward(4);
+turnTo(320);
+arcRight(25,15);
+turnTo(0);
+arcRight(25,35);
+turnTo(-35);
+arcRight(15,35);
+ // Peter and Wyatt Did This
+// Shirt Fill Right Sleeve
+penUp();
+moveTo(207,297);
+turnTo(-85);
+penWidth(1);
+penDown();
+moveForward(12);
+turnTo(25);
+arcLeft(25,25);
+turnTo(0);
+arcLeft(30,15);
+moveForward(5);
+turnTo(35);
+arcLeft(15,35);
+turnTo(90);
+moveForward(7);
+penWidth(5);
+turnTo(182);
+moveForward(30);
+turnTo(-90);
+moveForward(6);
+turnTo(25);
+arcLeft(25,25);
+turnTo(0);
+arcLeft(30,15);
+moveForward(4);
+turnTo(35);
+arcLeft(15,35);
+turnTo(90);
+moveForward(3);
+turnTo(190);
+penWidth(7);
+moveForward(10);
+ // Peter and Wyatt Did This
+// Shirt Fill Shoulders
+penUp();
+moveTo(203,265);
+turnTo(15);
+penDown();
+arcLeft(90,15);
+turnTo(-85);
+moveForward(5);
+penUp();
+moveForward(16);
+penDown();
+moveForward(1);
+arcRight(65,7);
+turnTo(-110);
+arcRight(40,43);
+turnTo(210);
+arcRight(65,5);
+turnTo(-95);
+penUp();
+moveForward(16);
+penDown();
+moveForward(4.5);
+arcLeft(90,14);
+turnTo(90);
+moveForward(17);
+turnTo(180);
+arcLeft(180,8);
+turnTo(90);
+moveForward(39);
+turnTo(180);
+arcLeft(180,9);
+turnTo(90);
+moveForward(12);
+turnTo(0);
+moveForward(4);
+turnTo(-90);
+moveForward(12.5);
+penUp();
+moveForward(17);
+penDown();
+moveForward(39);
+penUp();
+moveForward(17);
+penDown();
+moveForward(12);
+turnTo(0);
+moveForward(5);
+turnTo(90);
+moveForward(12);
+penUp();
+moveForward(19);
+penWidth(12);
+penDown();
+moveForward(35);
+penUp();
+moveForward(18);
+penWidth(5);
+penDown();
+moveForward(10);
+ // Peter and Wyatt Did This
+// Shirt Fill Middle
+penUp();
+moveTo(126,286);
+penDown();
+dot(20);
+moveTo(120,304);
+turnTo(115);
+arcLeft(65,23);
+penUp();
+moveTo(144,296);
+penDown();
+dot(5);
+
+penUp();
+moveTo(174,286);
+penDown();
+dot(20);
+moveTo(180,304);
+turnTo(-115);
+arcRight(65,23);
+penUp();
+moveTo(156,297);
+penDown();
+dot(5);
+
+penUp();
+moveTo(150,285);
+turnTo(0);
+penWidth(10);
+penDown();
+moveForward(15);
+turnTo(90);
+moveForward(35);
+turnTo(35);
+moveForward(8);
+moveBackward(4);
+turnTo(-90);
+moveForward(76);
+turnTo(135);
+moveForward(5);
+penUp();
+moveTo(150,285);
+penWidth(1);
+turnTo(180);
+penDown();
+moveForward(7);
+
+penUp();
+penWidth(2.5);
+moveTo(150,303);
+turnTo(135);
+penDown();
+moveForward(6);
+turnTo(-95);
+moveForward(12);
+turnTo(85);
+arcLeft(45,12);
+moveTo(150,303);
+turnTo(150);
+arcLeft(45,13);
+penWidth(1);
+turnTo(95);
+moveForward(6);
+penUp();
+moveForward(9);
+penDown();
+moveForward(5);
+turnLeft(15);
+penUp();
+arcLeft(45,10);
+penDown();
+turnTo(55);
+moveForward(5);
+turnTo(185);
+moveForward(3);
+turnTo(-95);
+moveForward(5);
+
+penUp();
+moveTo(121,332);
+turnTo(95);
+penWidth(10);
+penDown();
+moveForward(50);
+penUp();
+moveTo(124,342);
+turnTo(90);
+penWidth(10);
+penDown();
+moveForward(55);
+penUp();
+moveTo(121,331);
+turnTo(170);
+penWidth(10);
+penDown();
+moveForward(12);
+moveTo(179,343);
+turnTo(10);
+moveForward(1.5);
+turnTo(-80);
+arcRight(25,20);
+penWidth(1);
+
+penUp();
+moveTo(150,270);
+penDown();
+dot(10);
+}
+// End Shirt Fill Function
+
+ // Wyatt Did This
+function legsFill() {
+//Fills in the legs
+penUp();
+moveTo(132, 415);
+penDown();
+penWidth(21);
+penRGB(255, 219, 172, 1);
+turnTo(170);
+moveForward(50);
+
+penUp();
+moveTo(127, 410);
+penWidth(15);
+penDown();
+turnTo(90);
+moveForward(50);
+
+penUp();
+moveTo(172, 415);
+penWidth(21);
+penDown();
+turnTo(-170);
+moveForward(50);
+
+penUp();
+moveTo(151, 420);
+turnTo(180);
+penDown();
+penWidth(20);
+moveForward(25);
+
+penUp();
+moveTo(120, 403);
+penDown();
+penWidth(3);
+turnTo(90);
+moveForward(65);
+}
+// End Legs Fill
+// End of Scene
+
+ // Wyatt Did This
+// Nya~ Function 
+function sayNya() {
+penUp();
+penRGB(255, 0, 0, 1);
+moveTo(30, 270);
+penDown();
+turnTo(320);
+arcRight(30, 50);
+
+penUp();
+moveTo(30, 269);
+penDown();
+turnTo(355);
+moveForward(7);
+
+penUp();
+moveTo(25, 250);
+penDown();
+turnTo(60);
+moveForward(11);
+
+penUp();
+moveTo(33, 263);
+penDown();
+turnTo(90);
+arcLeft(5, 50);
+
+turnTo(55);
+moveForward(5);
+
+penUp();
+moveTo(50, 245);
+penDown();
+turnTo(150);
+moveForward(15);
+
+penUp();
+moveTo(47, 252);
+penDown();
+turnTo(60);
+moveForward(15);
+arcRight(170, 3);
+arcRight(85, 3);
+
+penUp();
+moveTo(51, 241);
+penDown();
+turnTo(75);
+arcRight(80, 3);
+
+penUp();
+moveTo(73, 245);
+penDown();
+turnTo(30);
+arcRight(75, 10);
+arcLeft(75, 10);
+}
+// End Nya~ Function
